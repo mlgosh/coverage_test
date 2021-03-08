@@ -6,7 +6,7 @@ sys.path.append("/home/maria/cambridge/coverage_test/scripts")
 
 from coverage import Coverage
 
-class TestReadSambambaOutput():
+class TestParseSambambaOutput():
     
     def setup(self):
         self.file_path = '/home/maria/cambridge/coverage_test/test_data/test.sambamba_output.txt'
@@ -23,7 +23,7 @@ class TestReadSambambaOutput():
                                 'percentage30': '100', 'sampleName': '1'}]
 
     def test_read_sambamba_output(self):
-        output = self.parser.read_sambamba_output()
+        output = self.parser.parse_sambamba_output()
         assert output == self.expected_output
 
 class TestAlmalgamatGenes():
